@@ -2,14 +2,13 @@
   "name": "pbc",
   "version": "1.0.0",
   "main": "index.js",
-  "homepage": "https://pasarbone.com/",
-  "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
-    "start": "next start",
+	"start": "NODE_ENV=production node server.js",
+	"predeploy": "npm run build"
     "deploy": "next build && next export && gh-pages -d out"
   },
   "author": "",

@@ -1,9 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { House } from 'lucide-react';
+import { Search } from 'lucide-react';
+
 const NavLinks = [
 	{
 		id: 1,
-		name: "Home",
+		name: "Product",
 		link: "/#",
 	},
 	{
@@ -32,16 +35,30 @@ export default function Navbar() {
 				{/*  Mobile menu button */}
 					<button> </button>
 				</div>
-				<div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-					<div className="">
-						<ul className="flex space-x-4">
-						{NavLinks.map(({ id, name, link }) => (
-							<li key={id}>
-								<Link href={link}>{name}</Link>
-							</li>
-						))}
-						</ul>
+				<div className="">
+					<div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+						<div className="navright">
+							<ul className="flex space-x-4">
+									<li className="py-6 px-4 hover:bg-gray-700 flex gap-2">
+										<i><House /></i>Home Page
+									</li>
+								{NavLinks.map(({ id, name, link }) => (
+									<li key={id} className="py-6 px-4 hover:bg-gray-700">
+										<Link href={link}>{name}</Link>
+									</li>
+								))}
+							</ul>
+						</div>
+						<div className="navleft">
+							<form>	
+								<div className="flex items-center py-6 px-4">
+									<input className="" type="text" placeholder="...search" name="search" value />
+									<button><i><Search /></i></button>
+								</div>							
+							</form>
+						</div>
 					</div>
+					
 				</div>
 			</div>
 			</div>

@@ -7,14 +7,15 @@
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
-	"start": "NODE_ENV=production node server.js",
-	"predeploy": "npm run build",
+    "start": "NODE_ENV=production node server.js",
+    "predeploy": "npm run build",
     "deploy": "next build && next export && gh-pages -d out"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "lucide-react": "^0.454.0",
     "next": "^15.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

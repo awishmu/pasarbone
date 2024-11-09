@@ -28,7 +28,7 @@ const NavLinks = [
 export default function Navbar() {
   return (
 	<>
-		<nav className="bg-gray-900 shadow-sm">
+		<nav className="bg-gray-900 shadow-sm w-full">
 			<div className="container mx-auto flex justify-center" >
 				<div className="relative">
 					<div className="absolute block md:hidden">

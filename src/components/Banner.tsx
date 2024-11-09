@@ -3,7 +3,7 @@ import Link from "next/link";
 import { House } from 'lucide-react';
 import { Search } from 'lucide-react';
 
-const HeroItems = [
+const BannerBox = [
 	{
 		id: 1,
 		image: "gudang",
@@ -34,20 +34,27 @@ const HeroItems = [
 	},
 	
 ]
-export default function Navbar() {
+export default function Banner() {
   return (
 	<>
-		<section className="bg-gray-900 shadow-sm">
-			<div className="container mx-auto pb-10" style={{ backgroundImage: "url('https://plus.unsplash.com/premium_photo-1664551734602-49640bd82eba?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"}}>
-				<div className="relative dark:text-white p-8 flex flex-col">
-					<h2 className="text-5xl font-bold lg:w-1/2">Enjoy nature Sustainable travel</h2>
-					<p className="text-xl font-bold lg:w-1/2">Enjoy nature Sustainable travel in BMW iX</p>
-					<Link href="#" className="border-2 border-white p-3 rounded-lg mt-6 w-28 flex items-center justify-center">Shop Now</Link>
+		<div className="categories">
+			<div>
+				{/* Item category*/}
+				
+				<div className="four-col-item md:w-1/2 lg:w-1/4 p-4 border-2 border-sky-200 ">
+					<div className="box relative mb-8">
+						<div className="absolute text-green-500 -z-10">
+							Image /> Image /> Image />
+						</div>
+						<div className="flex flex-col">
+							<span className="text-lg">50% OFF</span>
+							<h2 className="text-2xl font-bold">Vegetables</h2>
+							<Link href="" className="p-4 bg-rose-700 border-white">Shop Now</Link>
+						</div>
+					</div>
 				</div>
 			</div>
-		
-			
-		</section>
+		</div>
 		
 	</>
   );

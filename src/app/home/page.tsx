@@ -2,13 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Banner from "@/components/Banner";
 export default function HomePage() {
   return (
 	<>
-		<header className="container w-full mx-auto flex flex-col" >
+		<header className="w-full mx-auto flex flex-col" >
 			<Navbar />
-			<Hero />
         </header>
+		<main>
+			<Hero />
+			<Banner />
+		</main>
 		
 	</>
   );

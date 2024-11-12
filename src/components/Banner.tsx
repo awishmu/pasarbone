@@ -43,7 +43,7 @@ export default function Banner() {
 		<div className="categories container mx-auto">
 			<div className="w-full flex justify-between">
 				{/* Item category 1*/}					
-				<div className="four-col-item sm:w-1/2 lg:w-1/4 p-4 md:max-h-64">
+				<div className="four-col-item sm:w-1/2 lg:w-1/4 p-4 max-h-64 min-w-[250px]">
 					<div className="box relative">
 						<div className="text-green-500 border-2 border-sky-200 ">
 							<Image src="https://images.unsplash.com/photo-1473648717346-73c9c15cbad6?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt={"V3getables"} 
@@ -64,7 +64,7 @@ export default function Banner() {
 					</div>
 				</div>
 				{/* 2 */}
-				<div className="four-col-item md:w-1/2 lg:w-1/4 p-4 ">
+				<div className="four-col-item md:w-1/2 lg:w-1/4 p-4 max-h-64 min-w-[250px]">
 					<div className="box relative">
 						<div className="text-green-500 border-2 border-sky-200 ">
 							<Image src="https://media.istockphoto.com/id/184624619/id/foto/irisan-new-york-strip-steak-di-talenan.webp?s=1024x1024&w=is&k=20&c=1bBxBn4Hwk0Gp5n07VEPyHDvcP2m9hwai_rC655yWXU=" alt={"V3getables"} 
@@ -85,7 +85,7 @@ export default function Banner() {
 					</div>
 				</div>
 				{/* Item category 3*/}					
-				<div className="four-col-item sm:w-1/2 lg:w-1/4 p-4 md:max-h-64">
+				<div className="four-col-item sm:w-1/2 lg:w-1/4 p-4 max-h-64 min-w-[250px]">
 					<div className="box relative">
 						<div className="text-green-500 border-2 border-sky-200 ">
 							<Image src="https://media.istockphoto.com/id/1504179188/id/foto/gambar-yang-dipotong-dari-tangan-orang-dewasa-memegang-durian-di-rumah.webp?s=1024x1024&w=is&k=20&c=vj4N3seqrhpy3EbuOHeo_Q-eOE4IcEfwvcFZfqmqy6c=" alt={"V3getables"} 
@@ -106,7 +106,7 @@ export default function Banner() {
 					</div>
 				</div>
 				{/* 4 */}
-				<div className="four-col-item md:w-1/2 lg:w-1/4 p-4 ">
+				<div className="four-col-item md:w-1/2 lg:w-1/4 p-4 max-h-64 min-w-[250px] ">
 					<div className="box relative">
 						<div className="text-green-500 border-2 border-sky-200 ">
 							<Image src="https://images.unsplash.com/photo-1498654077810-12c21d4d6dc3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt={"V3getables"} 

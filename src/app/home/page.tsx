@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Banner from "@/components/Banner";
+import Area from "@/components/Area";
 export default function HomePage() {
   return (
 	<>
@@ -12,6 +13,7 @@ export default function HomePage() {
 		<main>
 			<Hero />
 			<Banner />
+			<Area />
 		</main>
 		
 	</>

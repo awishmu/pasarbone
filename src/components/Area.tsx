@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link"; 
-
+const imageStyle = {
+	objectFit: 'fill',
+  }
 export default function Area() {
   return (
 	<>
@@ -17,14 +19,16 @@ export default function Area() {
 								<Image 
 									src="https://cdn0-production-images-kly.akamaized.net/IwibSg0P6WOSFCLqi6frpxnhwSA=/0x24:999x587/680x383/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3420473/original/044747700_1617644743-shutterstock_1064990636.jpg" 
 									alt="kripik" 
-									width={100} height={80}
-									
+									 
+									style={imageStyle}
+									layout='fill'
 								/>
 							</div>
-							<div className="content">
-								<h3>Honey</h3>
-								<span>$22.20</span>
-								<button>Add</button>
+							<div className="content flex flex-col justify-center">
+									<h3 className="mx-auto ">Honey</h3>
+									<span className="mx-auto ">$22.20</span>
+									<button className="mx-auto ">Add</button>
+								
 							</div>
 						</Link>
 					</div>

@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Banner from "@/components/Banner";
 import Area from "@/components/Area";
+import Footer from "@/components/Footer";
 export default function HomePage() {
   return (
 	<>
@@ -14,6 +15,7 @@ export default function HomePage() {
 			<Hero />
 			<Banner />
 			<Area />
+			<Footer />
 		</main>
 		
 	</>

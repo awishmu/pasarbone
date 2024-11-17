@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { House } from 'lucide-react';
 import { Search } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
 const NavLinks = [
 	{
@@ -29,16 +30,15 @@ export default function Navbar() {
   return (
 	<>
 		<nav className="bg-gray-900 shadow-sm w-full">
-			<div className="container mx-auto flex justify-center" >
-				<div className="relative">
-					<div className="absolute block md:hidden">
-					{/*  Mobile menu button */}
-						<button> </button>
-					</div>
-					<div className="">
-						<div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-							<div className="navright">
-								<ul className="flex ">
+			<div className="container mx-auto flex justify-between" >
+				<div className="relative w-full inline-block">
+					<div className="w-full">
+							<div className="flex shrink-0 items-center ">
+								<i><House /></i>
+							</div>
+						<div className="nav_main flex flex-1 items-center justify-center md:justify-between">
+							<div className="nav_right flex flex-1 items-center justify-center sm:items-stretch sm:justify-start ">
+								<ul className="flex md:inline-block sm:ml-6 ">
 										<li className="py-6 px-4 hover:bg-gray-700 flex gap-2">
 											<i><House /></i>Home Page
 										</li>
@@ -49,7 +49,7 @@ export default function Navbar() {
 									))}
 								</ul>
 							</div>
-							<div className="navleft">
+							<div className="nav_left">
 								<form>	
 									<div className="flex items-center py-6 px-4 gap-2">
 										<input className="" type="text" placeholder="...search" name="search" />
@@ -58,8 +58,11 @@ export default function Navbar() {
 								</form>
 							</div>
 						</div>
-						
 					</div>
+				</div>
+				<div className="absolute inline md:hidden">
+					{/*  Mobile menu button */}
+					<button><i><Menu /></i></button>
 				</div>
 			</div>
 		

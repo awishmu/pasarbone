@@ -32,7 +32,7 @@ export default function Navbar() {
 		<nav className="bg-gray-900 shadow-sm w-full">
 			<div className="container mx-auto flex justify-between" >
 				<div className="relative w-full inline-block">
-					<div className="w-full">
+					<div className="w-full dark:text-white">
 							<div className="flex shrink-0 items-center ">
 								<i><House /></i>
 							</div>

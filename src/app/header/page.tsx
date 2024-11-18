@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { Brain } from 'lucide-react';
 import { Menu } from 'lucide-react';
 import { navigation } from "@/constants";
+import { HamburgerMenu } from "./design/Header";
 
 
 export default function HeaderPage() {
@@ -22,12 +23,12 @@ export default function HeaderPage() {
  		}
 	  };
 
-	  const handleClick = () => {
+	const handleClick = () => {
 		if (!openNavigation) return;
 
-		enablePageScroll();
 		setOpenNavigation(false);
-	  };
+	};
+
 
 	
   return (
@@ -37,21 +38,33 @@ export default function HeaderPage() {
 				<Link className="block w-[12rem] xl:mr-0" href="#hero" >
 					<Brain />			 
 				</Link>
-				<nav className={`${openNavigation ? "flex" : "hidden" } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}>			
-					<div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
+				<nav
+					  className={`${
+						openNavigation ? "flex" : "hidden"
+					  } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
+					>
+					  <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
 						{navigation.map((item) => (
-							<Link
-								key={item.id}
-								href={item.url}
-								onClick={handleClick}
-								className={`block relative font-code text-2xl uppecase text-n-1 transition-colors hover:text-color-1 ${item.onlyMobile ? "lg:hidden" : ""} px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${item.url === pathname.hash ? "z-2 lg:text-n-1" : "lg:text-n-1/50"} lg:leading-5 lg:hover:text-n-1 xl:px-12`}
-							>
-								{item.title}
-							</Link>
+						  <a
+							key={item.id}
+							href={item.url}
+							onClick={handleClick}
+							className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
+							  item.onlyMobile ? "lg:hidden" : ""
+							} px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
+							  item.url === pathname.hash
+								? "z-2 lg:text-n-1"
+								: "lg:text-n-1/50"
+							} lg:leading-5 lg:hover:text-n-1 xl:px-12`}
+						  >
+							{item.title}
+						  </a>
 						))}
-					</div>
-					<Menu />
-				</nav>
+					  </div>
+						 
+					  <Menu className="sm:block hidden absolute top-12 z-30 text-gray-100"/>
+					</nav>
+					
 				<Link 
 					href="#signup"
 					className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"

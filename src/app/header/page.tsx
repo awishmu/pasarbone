@@ -34,16 +34,16 @@ export default function HeaderPage() {
   return (
   <>
 		<div className={`fixed top-0 left-0 w-full z-50 bg-n-8/90 backdrop-blur-sm border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"}`}>
-			<div className="flex items-center px-5 lg:px7.5 xl:px-10 max-lg:py-4">		
-				<Link className="block w-[12rem] xl:mr-0" href="#hero" >
+			<nav className="w-full flex items-center justify-between">		
+				<Link className="w-[12rem] xl:mr-0" href="#hero" >
 					<Brain />			 
 				</Link>
-				<nav
+				<div
 					  className={`${
 						openNavigation ? "flex" : "hidden"
 					  } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
-					>
-					  <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
+				>
+					  <div className="relative z-10 overflow-y-auto flex flex-col items-center justify-center m-auto lg:flex-row">
 						{navigation.map((item) => (
 						  <a
 							key={item.id}
@@ -62,9 +62,15 @@ export default function HeaderPage() {
 						))}
 					  </div>
 						 
-					  <Menu className="sm:block hidden absolute top-12 z-30 text-gray-100"/>
-					</nav>
-					
+					  
+				</div>
+				<button
+				  className="ml-auto md:hidden z-30"
+				  px="px-3"
+				  onClick={toggleNavigation}
+				>
+					<Menu className=" text-gray-100" openNavigation={openNavigation}/>	
+				</button>
 				<Link 
 					href="#signup"
 					className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
@@ -74,7 +80,7 @@ export default function HeaderPage() {
 				<Link className="hidden lg:flex " href="#login">
 					Sign in
 				</Link>
-			</div>
+			</nav>
 		</div>
 		
 	 </>

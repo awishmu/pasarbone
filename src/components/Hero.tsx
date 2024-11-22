@@ -37,7 +37,7 @@ const HeroItems = [
 export default function Navbar() {
   return (
 	<>
-		<section className="bg-gray-900 shadow-sm">
+		<section className="dark:bg-gray-900 shadow-sm">
 			<div className="container mx-auto pb-10" style={{ backgroundImage: "url('https://plus.unsplash.com/premium_photo-1664551734602-49640bd82eba?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"}}>
 				<div className="relative dark:text-white p-8 flex flex-col">
 					<h2 className="text-5xl font-bold lg:w-1/2">Enjoy nature Sustainable travel</h2>

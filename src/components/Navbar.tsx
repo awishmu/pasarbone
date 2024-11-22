@@ -1,9 +1,11 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import { House } from 'lucide-react';
 import { Search } from 'lucide-react';
 import { Menu } from 'lucide-react';
 import PBCLogo from '/public/pbc_logo.png'
+import { useState } from 'react';
 
 const NavLinks = [
 	{
@@ -27,7 +29,27 @@ const NavLinks = [
 		link: "/#",
 	}
 ]
+
+
+
 export default function Navbar() {
+	
+	const [openNavMenu, setOpenNavMenu] = useState(false);
+	
+	const toggleNavMenu = () => {
+		if (openNavMenu) {
+		  setOpenNavMenu(false);
+ 		} else {
+		  setOpenNavMenu(true);
+ 		}
+	  };
+
+	const handleClick = () => {
+		if (!openNavMenu) return;
+
+		setOpenNavMenu(false);
+	};
+	
   return (
 	<>
 		<nav className="bg-gray-900 shadow-sm w-full">
@@ -37,9 +59,11 @@ export default function Navbar() {
 							<div className="flex shrink-0 items-center py-4 ">
 								<Link href="#"><Image src={PBCLogo} alt={'PBCLogo'} width={50} height={50} /></Link>
 							</div>
-						<div className="nav_main flex flex-1 items-center justify-center md:justify-between">
-							<div className="nav_right hidden lg:flex  flex-1 items-center justify-center sm:items-stretch sm:justify-start ">
-								<ul className="flex sm:ml-6 ">
+						<div className="nav_main flex flex-1 items-center justify-center md:justify-between m-0">
+							<div className={`nav_right ${
+						openNavMenu ? "flex" : "hidden"
+					  } relative lg:flex  flex-1 items-center justify-center sm:items-stretch sm:justify-start z-20`}>
+								<ul className="flex flex-col lg:flex-row absolute lg:relative top-20 lg:top-0 left-0- z-20 w-full bg-gray-900 sm:ml-6 ">
 										<li className="py-6 px-4 hover:bg-gray-700 flex gap-2">
 											<i><House /></i>Home Page
 										</li>
@@ -50,7 +74,7 @@ export default function Navbar() {
 									))}
 								</ul>
 							</div>
-							<div className="nav_left mx-auto">
+							<div className="nav_left mx-auto absolute lg:relative z-10">
 								<form>	
 									<div className="flex items-center py-6 px-4 gap-2">
 										<input className="" type="text" placeholder="...search" name="search" />
@@ -59,9 +83,9 @@ export default function Navbar() {
 								</form>
 							</div>
 						</div>
-						<div className="absolute  lg:hidden z-20 right-0">
+						<div className="absolute lg:hidden z-20 right-0">
 							{/*  Mobile menu button */}
-							<button><i><Menu /></i></button>
+							<button onClick={toggleNavMenu}><i><Menu /></i></button>
 						</div>
 						
 					</div>

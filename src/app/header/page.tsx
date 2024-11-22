@@ -13,37 +13,37 @@ import { HamburgerMenu } from "./design/Header";
 export default function HeaderPage() {
 	
 	const pathname = usePathname();
-	const [openNavigation, setOpenNavigation] = useState(false);
+	const [openNavMenu, setOpenNavMenu] = useState(false);
 	
-	const toggleNavigation = () => {
-		if (openNavigation) {
-		  setOpenNavigation(false);
+	const toggleNavMenu = () => {
+		if (openNavMenu) {
+		  setOpenNavMenu(false);
  		} else {
-		  setOpenNavigation(true);
+		  setOpenNavMenu(true);
  		}
 	  };
 
 	const handleClick = () => {
-		if (!openNavigation) return;
+		if (!openNavMenu) return;
 
-		setOpenNavigation(false);
+		setOpenNavMenu(false);
 	};
 
 
 	
   return (
   <>
-		<div className={`fixed top-0 left-0 w-full z-50 bg-n-8/90 backdrop-blur-sm border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"}`}>
+		<div className={`fixed top-0 left-0 w-full z-50 backdrop-blur-sm border-b`}>
 			<nav className="w-full flex items-center justify-between">		
 				<Link className="w-[12rem] xl:mr-0" href="#hero" >
 					<Brain />			 
 				</Link>
 				<div
 					  className={`${
-						openNavigation ? "flex" : "hidden"
-					  } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
+						openNavMenu ? "flex" : "hidden"
+					  } relative top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
 				>
-					  <div className="relative z-10 overflow-y-auto flex flex-col items-center justify-center m-auto lg:flex-row">
+					  <div className="min-w-[400px] border-rose-200 border-2 absolute top-20 md:top-0 md:relative z-10 overflow-y-auto flex flex-col items-center justify-center m-auto md:flex-row">
 						{navigation.map((item) => (
 						  <a
 							key={item.id}
@@ -52,7 +52,7 @@ export default function HeaderPage() {
 							className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
 							  item.onlyMobile ? "lg:hidden" : ""
 							} px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
-							  item.url === pathname.hash
+							  item.url === pathname
 								? "z-2 lg:text-n-1"
 								: "lg:text-n-1/50"
 							} lg:leading-5 lg:hover:text-n-1 xl:px-12`}
@@ -65,11 +65,11 @@ export default function HeaderPage() {
 					  
 				</div>
 				<button
-				  className="ml-auto md:hidden z-30"
+				  className="ml-auto md:hidden z-20"
 				  px="px-3"
-				  onClick={toggleNavigation}
+				  onClick={toggleNavMenu}
 				>
-					<Menu className=" text-gray-100" openNavigation={openNavigation}/>	
+					<Menu className=" text-gray-100" />	
 				</button>
 				<Link 
 					href="#signup"
@@ -82,7 +82,7 @@ export default function HeaderPage() {
 				</Link>
 			</nav>
 		</div>
-		
 	 </>
   );
 }
+

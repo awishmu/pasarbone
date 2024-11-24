@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link"; 
+import { Star } from 'lucide-react';
 const imageStyle = { 
   }
 export default function Area() {
@@ -7,14 +8,14 @@ export default function Area() {
 	<>
 		<div>
 			<section className="container mx-auto">
-				<div className="header w-full mx-auto flex flex-col justify-center">
+				<div className="header w-full mx-auto flex flex-col justify-center mb-12">
 					<span className="mx-auto text-rose-500 text-xl">Product</span>
-					<h2 className="mx-auto text-3xl">Our Hot Product</h2>
+					<h2 className="mx-auto text-3xl">Our Hot Products</h2>
 				</div>
 				<div className="wrapper w-full flex justify-between flex-wrap gap-2 ">
-					<div className="wrap-item w-[275px] mx-2 my-4">
+					<div className="wrap-item w-[275px] xl:w-1/4 p-2 bg-gray-100 bg-opacity-5 rounded-md">
 						<Link href="#" className="relative flex flex-col">
-							<div className="image">
+							<div className="image w-full my-4 bg-gray-100 bg-opacity-10 rounded-md">
 								<Image 
 									src="https://res.cloudinary.com/dev-empty/image/upload/v1630999309/eplrjqz3r5inll57ocxa.jpg" 
 									alt="Honey" 
@@ -22,10 +23,10 @@ export default function Area() {
 									className="object-fill h-48 w-96 "
  								/>
 							</div>
-							<div className="content flex flex-col justify-center pt-4">
+							<div className="w-full content flex flex-col justify-center">
 									<h3 className="mx-auto text-xl font-bold">Honey</h3>
-									<span className="mx-auto text-lg text-rose-500">$22.20</span>
-									<button className="mx-auto ">Add</button>
+									<span className="w-full px-2 py-4 mx-auto text-lg text-rose-500 flex justify-between">$22.20 <span className="flex"><Star /><Star /><Star /><Star /></span></span>
+									<button className="w-full mx-auto border-sky-500 border-2 px-8 py-4 rounded-lg">Add</button>
 								
 							</div>
 						</Link>

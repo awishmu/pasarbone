@@ -67,6 +67,15 @@ const CategoriesBox = [
 		link: "/#",
 		imageSrc: "https://media.istockphoto.com/id/1157804675/id/foto/telur-coklat-di-piring.jpg?s=612x612&w=0&k=20&c=rZcYUF1-a58VzoL8DJr8fDmcp7oB6jw7372j7EUjF-A=",
 	},
+	{
+		id: 8,
+		image: "sembako",
+		title: "Sembako",
+		discount: "10% Off",
+		textColor: "text-rose-700",
+		link: "/#",
+		imageSrc: "https://media.istockphoto.com/id/1157804675/id/foto/telur-coklat-di-piring.jpg?s=612x612&w=0&k=20&c=rZcYUF1-a58VzoL8DJr8fDmcp7oB6jw7372j7EUjF-A=",
+	},
 ]
 
 const arr = CategoriesBox;

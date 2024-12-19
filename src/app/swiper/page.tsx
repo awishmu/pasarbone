@@ -1,27 +1,32 @@
 "use client"
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from 'next/navigation';
-import { Swiper, SwiperSlide, Pagination } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-export default function SwiperPage() {
-// https://www.youtube.com/watch?v=O0N4Ona214g&t=11s
-  return (
-	<>
-			   <Swiper
-					pagination={{
-						dynamicBullets: true,
-					}}
-					modules={[Pagination]}
-					className="mySwipre"
-				>
-				  <SwiperSlide>Slide 1</SwiperSlide>
-				  <SwiperSlide>Slide 2</SwiperSlide>
-				  <SwiperSlide>Slide 3</SwiperSlide>
-				  <SwiperSlide>Slide 4</SwiperSlide>
-				</Swiper>
-	</>
-  );
-}
 
+import React, { useRef, useState } from 'react';
+
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+export default function Page() {
+	
+	return (
+ 		<Swiper
+		  spaceBetween={50}
+		  slidesPerView={3}
+		  onSlideChange={() => console.log('slide change')}
+		  onSwiper={(swiper) => console.log(swiper)}
+		  navigation={true} modules={[Navigation]}
+		>
+		  <SwiperSlide className="w-full">Slide 1</SwiperSlide>
+		  <SwiperSlide className="w-full">Slide 2</SwiperSlide>
+		  <SwiperSlide className="w-full">Slide 3</SwiperSlide>
+		  <SwiperSlide className="w-full">Slide 4</SwiperSlide>
+ 		</Swiper>
+	)
+}

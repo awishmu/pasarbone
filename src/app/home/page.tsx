@@ -12,6 +12,9 @@ export default function HomePage() {
 			<Navbar />
         	</header>
 		<main>
+			<div><p>
+			ini adalah halaman home
+			</p></div>
 			<Hero />
 			<Banner />
 			<Area />

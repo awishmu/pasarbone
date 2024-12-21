@@ -15,16 +15,21 @@ const NavLinks = [
 	},
 	{
 		id: 2,
-		name: "Cart",
+		name: "Resep",
 		link: "/#",
 	},
 	{
 		id: 3,
-		name: "About",
+		name: "Cart",
 		link: "/#",
 	},
 	{
 		id: 4,
+		name: "About",
+		link: "/#",
+	},
+	{
+		id: 5,
 		name: "Contact",
 		link: "/#",
 	}

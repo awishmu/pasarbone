@@ -1,7 +1,22 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
-import { House } from 'lucide-react';
-import { Search } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+// import './styles.css';
+
+import React, { useEffect, useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation'; 
+
+import telurHeroPic from '/public/pictures/IMG20241116122934.jpg';
+import telurHeroPic2 from '/public/pictures/IMG20231225090919.jpg';
+import telurHeroPic3 from '/public/pictures/IMG20241108054651.jpg';
 
 const HeroItems = [
 	{
@@ -34,19 +49,121 @@ const HeroItems = [
 	},
 	
 ]
-export default function Navbar() {
+export default function Hero() {
   return (
 	<>
 		<section className="dark:bg-gray-900 shadow-sm">
-			<div className="container mx-auto pb-10" style={{ backgroundImage: "url('https://plus.unsplash.com/premium_photo-1664551734602-49640bd82eba?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"}}>
-				<div className="relative dark:text-white p-8 flex flex-col">
-					<h2 className="text-5xl font-bold lg:w-1/2">Enjoy nature Sustainable travel</h2>
-					<p className="text-xl font-bold lg:w-1/2">Enjoy nature Sustainable travel in BMW iX</p>
-					<Link href="#" className="border-2 border-white p-3 rounded-lg mt-6 w-28 flex items-center justify-center">Shop Now</Link>
-				</div>
-			</div>
-		
-			
+			<Swiper
+ 				    modules={[Navigation]}
+					navigation 
+					loop={true}
+				  onSlideChange={() => console.log('slide change')}
+				  onSwiper={(swiper) => console.log(swiper)} 
+				  className="bg-gray-900"
+				>
+				  <SwiperSlide className="swiper--slide--item m-h-[396px]">
+					<div className="slide-item relative">	
+						<div className="content-hero relative top-0 z-20 relative mx-auto max-w-screen-xl py-6 px-4 sm:px-6 lg:flex lg:items-center lg:px-8">
+							<div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+								<h5 className="text-lg font-extra-bold block text-rose-500 sm:text-lg my-4">Produk Populer</h5>
+								<h1 className="text-3xl font-extra-bold text-white sm:text-5xl">Ayam Kampung Organik</h1>
+								<p className="mt-4 max-w-lg text-white sm:text-xl/relaxed mx-auto">
+									Sering dimanfaatkan sebagai obat alami, penambah stamina, dan pemeliharan kesehatan.
+								</p>
+								<div className="button-wrap mt-8 flex flex-wrap justify-center gap-4 mx-auto w-full">
+									<Link 
+										href="#"
+										className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+									>
+										Shop Now
+									</Link> 
+								</div>
+							</div>
+						</div>
+						<div
+							className="absolute inset-0 bg-gray-900/75 sm:bg-transparent sm:from-gray-900/95 sm:to-gray-900/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
+						></div>
+						<div className="image-bg absolute top-0 z-10 w-full h-full">
+							<Image
+								src={telurHeroPic3} 
+								alt="img-telur"
+								fill
+								style={{ 
+										objectFit: 'cover'
+									}}
+							/>
+						</div>
+					</div>{/* End Hero Item 3*/} 
+				  </SwiperSlide>
+				  <SwiperSlide className="swiper--slide--item m-h-[396px]">
+					<div className="slide-item relative">	
+						<div className="content-hero relative top-0 z-20 relative mx-auto max-w-screen-xl py-6 px-4 sm:px-6 lg:flex lg:items-center lg:px-8">
+							<div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+								<h5 className="text-lg font-extra-bold block text-rose-500 sm:text-lg my-4">Produk Pilihan</h5>
+								<h1 className="text-3xl font-extra-bold text-white sm:text-5xl">Anak Ayam Kampung / DOC</h1>
+								<p className="mt-4 max-w-lg text-white sm:text-xl/relaxed mx-auto">
+									Memelihara anak ayam kampung akan menjadi hiburan dan merefreshing pikiran dari kepenatan, menjadi tambahan penghasilan dan kecukupan gizi keluarga. 
+								</p>
+								<div className="button-wrap mt-8 flex flex-wrap justify-center gap-4 mx-auto w-full">
+									<Link 
+										href="#"
+										className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+									>
+										Shop Now
+									</Link> 
+								</div>
+							</div>
+						</div>
+						<div
+							className="absolute inset-0 bg-gray-900/75 sm:bg-transparent sm:from-gray-900/95 sm:to-gray-900/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
+						></div>
+						<div className="image-bg absolute top-0 z-10 w-full h-full">
+							<Image
+								src={telurHeroPic2} 
+								alt="img-telur"
+								fill
+								style={{ 
+										objectFit: 'cover'
+									}}
+							/>
+						</div>
+					</div>{/* End Hero Item 2*/} 
+				  </SwiperSlide>
+				  <SwiperSlide className="swiper--slide--item m-h-[396px]">
+						<div className="slide-item relative">	
+							<div className="content-hero relative top-0 z-20 relative mx-auto max-w-screen-xl py-6 px-4 sm:px-6 lg:flex lg:items-center lg:px-8">
+								<div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+									<h5 className="text-lg font-extra-bold block text-rose-500 sm:text-lg my-4">Produk Unggulan</h5>
+									<h1 className="text-3xl font-extra-bold text-white sm:text-5xl">Telur Ayam Kampung</h1>
+									<p className="mt-4 max-w-lg text-white sm:text-xl/relaxed mx-auto">
+										Sering dimanfaatkan sebagai obat alami, penambah stamina, dan pemeliharan kesehatan.
+									</p>
+									<div className="button-wrap mt-8 flex flex-wrap justify-center gap-4 mx-auto w-full">
+										<Link 
+											href="#"
+											className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+										>
+											Shop Now
+										</Link> 
+									</div>
+								</div>
+							</div>
+							<div
+								className="absolute inset-0 bg-gray-900/75 sm:bg-transparent sm:from-gray-900/95 sm:to-gray-900/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
+							></div>
+							<div className="image-bg absolute top-0 z-10 w-full h-full">
+								<Image
+									src={telurHeroPic} 
+									alt="img-telur"
+									fill
+									style={{ 
+											objectFit: 'cover'
+										}}
+								/>
+							</div>
+						</div>{/* End Hero Item 1*/} 
+				  </SwiperSlide>
+				</Swiper>	
 		</section>
 		
 	</>

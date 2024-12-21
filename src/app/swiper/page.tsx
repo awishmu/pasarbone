@@ -1,32 +1,24 @@
-"use client"
-
-import React, { useRef, useState } from 'react';
-
-// import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-
+import Image from "next/image";
+import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Banner from "@/components/Banner";
+import Area from "@/components/Area";
+import Footer from "@/components/Footer";
 export default function SwiperPage() {
-	
-	return (
- 		<Swiper
-		  spaceBetween={50}
-		  slidesPerView={3}
-		  onSlideChange={() => console.log('slide change')}
-		  onSwiper={(swiper) => console.log(swiper)}
-		  navigation={true} modules={[Navigation]}
-		>
-		  <SwiperSlide className="w-full">Slide 1</SwiperSlide>
-		  <SwiperSlide className="w-full">Slide 2</SwiperSlide>
-		  <SwiperSlide className="w-full">Slide 3</SwiperSlide>
-		  <SwiperSlide className="w-full">Slide 4</SwiperSlide>
- 		</Swiper>
-	)
+  return (
+	<>
+		<header className="w-full mx-auto flex flex-col" >
+			<Navbar />
+        </header>
+		<main>
+			<Hero />
+			<Banner />
+			<Area />
+			<Footer />
+		</main>
+		
+		
+	</>
+  );
 }

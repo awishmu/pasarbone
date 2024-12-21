@@ -15,8 +15,7 @@ export default function HomePage() {
 			<div><p>
 			ini adalah halaman home
 			</p></div>
-			<Hero />
-			<Banner />
+			
 			<Area />
 			<Footer />
 		</main>

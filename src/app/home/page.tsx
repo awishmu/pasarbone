@@ -5,7 +5,7 @@ import Hero from "@/components/Hero";
 import Banner from "@/components/Banner";
 import Area from "@/components/Area";
 import Footer from "@/components/Footer";
-export default function HomePage() {
+export default function Page() {
   return (
 	<>
 		<header className="w-full mx-auto flex flex-col" >

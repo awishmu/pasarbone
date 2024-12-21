@@ -14,7 +14,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation'; 
 
-import telurHeroPic from '/public/pictures/IMG20241116122934.jpg';
+import telurHeroPic1 from '/public/pictures/IMG20241116122934.jpg';
 import telurHeroPic2 from '/public/pictures/IMG20231225090919.jpg';
 import telurHeroPic3 from '/public/pictures/IMG20241108054651.jpg';
 
@@ -100,9 +100,9 @@ export default function Hero() {
 						<div className="content-hero relative top-0 z-20 relative mx-auto max-w-screen-xl py-6 px-4 sm:px-6 lg:flex lg:items-center lg:px-8">
 							<div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
 								<h5 className="text-lg font-extra-bold block text-rose-500 sm:text-lg my-4">Produk Pilihan</h5>
-								<h1 className="text-3xl font-extra-bold text-white sm:text-5xl">Anak Ayam Kampung / DOC</h1>
+								<h1 className="text-3xl font-extra-bold text-white sm:text-5xl">Bibit Ayam Kampung</h1>
 								<p className="mt-4 max-w-lg text-white sm:text-xl/relaxed mx-auto">
-									Memelihara anak ayam kampung akan menjadi hiburan dan merefreshing pikiran dari kepenatan, menjadi tambahan penghasilan dan kecukupan gizi keluarga. 
+									Memelihara anak ayam kampung akan menjadi hiburan dan merefreshing pikiran dari kepenatan. 
 								</p>
 								<div className="button-wrap mt-8 flex flex-wrap justify-center gap-4 mx-auto w-full">
 									<Link 
@@ -153,7 +153,7 @@ export default function Hero() {
 							></div>
 							<div className="image-bg absolute top-0 z-10 w-full h-full">
 								<Image
-									src={telurHeroPic} 
+									src={telurHeroPic1} 
 									alt="img-telur"
 									fill
 									style={{ 

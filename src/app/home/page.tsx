@@ -11,12 +11,12 @@ export default function HomePage() {
 		<header className="w-full mx-auto flex flex-col" >
 			<Navbar />
         </header>
-		<main>
-			<Hero />
+		<Hero />
+		<main className="bg-gray-50 w-full">
 			<Banner />
 			<Area />
-			<Footer />
 		</main>
+		<Footer />
 		
 	</>
   );

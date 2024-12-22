@@ -61,8 +61,8 @@ export default function Hero() {
 				  onSwiper={(swiper) => console.log(swiper)} 
 				  className="bg-gray-900"
 				>
-				  <SwiperSlide className="swiper--slide--item m-h-[396px]">
-					<div className="slide-item relative">	
+				  <SwiperSlide className="swiper--slide--item min-h-[396px]">
+					<div className="slide-item relative py-2 lg:py-[175px]">	
 						<div className="content-hero relative top-0 z-20 relative mx-auto max-w-screen-xl py-6 px-4 sm:px-6 lg:flex lg:items-center lg:px-8">
 							<div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
 								<h5 className="text-lg font-extra-bold block text-rose-500 sm:text-lg my-4">Produk Populer</h5>
@@ -95,8 +95,8 @@ export default function Hero() {
 						</div>
 					</div>{/* End Hero Item 3*/} 
 				  </SwiperSlide>
-				  <SwiperSlide className="swiper--slide--item m-h-[396px]">
-					<div className="slide-item relative">	
+				  <SwiperSlide className="swiper--slide--item min-h-[396px]">
+					<div className="slide-item relative py-2 lg:py-[175px]">	
 						<div className="content-hero relative top-0 z-20 relative mx-auto max-w-screen-xl py-6 px-4 sm:px-6 lg:flex lg:items-center lg:px-8">
 							<div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
 								<h5 className="text-lg font-extra-bold block text-rose-500 sm:text-lg my-4">Produk Pilihan</h5>
@@ -129,8 +129,8 @@ export default function Hero() {
 						</div>
 					</div>{/* End Hero Item 2*/} 
 				  </SwiperSlide>
-				  <SwiperSlide className="swiper--slide--item m-h-[396px]">
-						<div className="slide-item relative">	
+				  <SwiperSlide className="swiper--slide--item min-h-[396px]">
+						<div className="slide-item relative py-2 lg:py-[175px]">	
 							<div className="content-hero relative top-0 z-20 relative mx-auto max-w-screen-xl py-6 px-4 sm:px-6 lg:flex lg:items-center lg:px-8">
 								<div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
 									<h5 className="text-lg font-extra-bold block text-rose-500 sm:text-lg my-4">Produk Unggulan</h5>

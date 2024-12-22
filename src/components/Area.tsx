@@ -13,7 +13,7 @@ export default function Area() {
 			<section className="container mx-auto">
 				<div className="header w-full mx-auto flex flex-col justify-center mb-12">
 					<span className="mx-auto text-rose-500 text-xl">Product</span>
-					<h2 className="mx-auto text-3xl">Our Hot Products</h2>
+					<h2 className="mx-auto text-3xl text-gray-950">Our Hot Products</h2>
 				</div>
 				<div className="wrapper w-full flex justify-item-start justify-between flex-wrap gap-2 ">
 			 

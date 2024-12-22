@@ -57,7 +57,7 @@ export default function Navbar() {
 	
   return (
 	<>
-		<nav className="bg-gray-900 shadow-sm w-full">
+		<nav className="bg-gray-950 shadow-sm w-full">
 			<div className="container mx-auto flex justify-between" >
 				<div className="w-full dark:text-gray-100 text-gray-100">
 					<div className="relative w-full flex justify-between items-center">

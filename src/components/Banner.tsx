@@ -94,7 +94,7 @@ export default function Banner() {
 			<div className="carousel w-full flex lg:justify-between flex-col md:flex-row md:overflow-x-hidden">
 			
 				{getCategoriesBox.map(({ id, image, title, discount, link, imageSrc, textColor}) => (
-				<div key={id} className="four-col-item md:w-1/2 xl:w-1/4 p-4 mb-4  mx-2 max-h-[250px] min-w-[300px] max-w-[320px] border-2 border-sky-200">
+				<div key={id} className="four-col-item md:w-1/2 xl:w-1/4 p-4 mb-4 max-h-[250px] min-w-[300px] max-w-[320px]">
 					<div className="box relative w-full h-full">
  							<Image src={imageSrc} alt={title}
 								width={'100'} height={'100'}

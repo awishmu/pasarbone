@@ -91,18 +91,18 @@ export default function Banner() {
   return (
 	<>
 		<div className="categories container mx-auto py-20">
-			<div className="carousel w-full flex lg:justify-between flex-col md:flex-row md:overflow-x-hidden">
+			<div className="carousel w-full flex justify-between flex-wrap">
 			
 				{getCategoriesBox.map(({ id, image, title, discount, link, imageSrc, textColor}) => (
-				<div key={id} className="four-col-item md:w-1/2 xl:w-1/4 p-4 mb-4 max-h-[250px] min-w-[300px] max-w-[320px]">
+				<div key={id} className="four-col-item w-1/2 lg:w-1/4 px-2 max-w-[320px]">
 					<div className="box relative w-full h-full">
  							<Image src={imageSrc} alt={title}
 								width={'100'} height={'100'}
 								style={{
 									width:'100%',
 									height:'100%',
-									objectFit: 'cover'
-								}}
+									objectFit: 'cover',
+ 								}}
 							/>
  						<div className={`p-8 flex flex-col absolute top-0 left-0 ${textColor}`}>
 							<span className="text-lg font-bold">{discount}% OFF </span>

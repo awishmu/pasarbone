@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function RootPage() {
   return (
   <>
-	  <div><h1>Root Page</h1></div>
+	  <div><h1 className="text-3xl" >Root Page</h1></div>
         <section className=
 		"bg-white dark:bg-gray-900">
 		    <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">

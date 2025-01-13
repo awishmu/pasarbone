@@ -11,6 +11,7 @@ export default function HomePage() {
 	<>
 		<header className="w-full mx-auto flex flex-col" >
 			<Navbar />
+			<p>Index page lambat loading</p>
         	</header>
 		<Hero />
 		<main className="bg-gray-50 w-full">

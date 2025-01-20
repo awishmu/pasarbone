@@ -99,9 +99,7 @@ export default function Navbar() {
 			</div>
 		
 			{/* <!-- Mobile menu, show/hide based on menu state. --> */}
-			<div className="mobile-nav  h4 w-90 bg-rose-300">
-				<p>mobilenav</p>
-			</div>
+			
 		</nav>
 		
 	</>

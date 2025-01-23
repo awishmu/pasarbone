@@ -10,7 +10,7 @@ export default function ProductsPage() {
 		<header className="w-full mx-auto flex flex-col" >
 			<Navbar />
         </header>
-		<main className="bg-gray-50 w-full p-0">
+		<main className="bg-gray-50 w-full">
 			<Area />
 		</main>
 		<Footer />

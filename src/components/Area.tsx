@@ -9,20 +9,20 @@ const imageStyle = {}
 export default function Area() {
   return (
 	<>
-		<div>
-			<section className="container mx-auto">
-				<div className="header w-full mx-auto flex flex-col justify-center mb-12">
+		<div className="py-8">
+			<section className="container mx-auto mt-8">
+				<div className="header w-full mx-auto flex flex-col justify-center my-12">
 					<span className="mx-auto text-rose-500 text-xl font-bold">Product</span>
 					<h2 className="mx-auto text-4xl font-bold text-gray-950">Our Hot Products</h2>
 				</div>
 				<div className="wrapper w-full flex justify-item-start justify-between flex-wrap">
 			 
 				{AreaItems.map(({ id, category, title, price, offer, star, link, imageSrc}) => (
-					<div key={id} className="wrap-item w-full w-1/2 lg:w-1/4 p-2 bg-gray-100 bg-opacity-90 rounded-md mb-2">
+					<div key={id} className="wrap-item w-full w-1/2 lg:w-1/4 p-2 rounded-md mb-2">
 						<Link href="#" className="relative flex flex-col">
 							<div className="image w-full mb-4">
 								<Image 
-									src="https://res.cloudinary.com/dev-empty/image/upload/v1630999309/eplrjqz3r5inll57ocxa.jpg" 
+									src="https://res.cloudinary.com/dev-empty/image/upload/v1630999263/auukzdudrukdxcqvls6e.jpg" 
 									alt="Honey" 
 									width={100} height={100}
 									className="object-cover w-full h-48"

@@ -4,35 +4,28 @@ import Link from "next/link";
 import { House } from 'lucide-react';
 import { Search } from 'lucide-react';
 import { Menu } from 'lucide-react';
+import { User } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
+
 import PBCLogo from '/public/pbc_logo.png'
 import { useState } from 'react';
 
 const NavLinks = [
 	{
 		id: 1,
-		name: "Product",
-		link: "/#",
+		name: "Products",
+		link: "/products",
 	},
 	{
 		id: 2,
 		name: "Resep",
 		link: "/#",
-	},
-	{
-		id: 3,
-		name: "Cart",
-		link: "/#",
-	},
+	}, 
 	{
 		id: 4,
 		name: "About",
-		link: "/#",
-	},
-	{
-		id: 5,
-		name: "Contact",
-		link: "/#",
-	}
+		link: "/about",
+	}, 
 ]
 
 
@@ -66,9 +59,10 @@ export default function Navbar() {
 							</div>
 						<div className="nav_main flex flex-1 items-center justify-center md:justify-between m-0">
 							<div className={`nav_right ${
-						openNavMenu ? "flex" : "hidden"
-					  } relative lg:flex  flex-1 items-center justify-center sm:items-stretch sm:justify-start z-20`}>
-								<ul className="flex flex-col lg:flex-row absolute lg:relative top-20 lg:top-0 left-0- z-20 w-full bg-gray-900 sm:ml-6 ">
+								openNavMenu ? "flex" : "hidden"
+							  } relative lg:flex  flex-1 items-center justify-center sm:items-stretch sm:justify-start z-20`}
+							>
+								<ul className="flex flex-col lg:flex-row absolute lg:relative top-20 lg:top-0 left-0- z-20 w-full sm:ml-6 ">
 										<li className="py-6 px-4 hover:bg-gray-700 flex gap-2">
 											<i><House /></i>Home Page
 										</li>
@@ -79,13 +73,16 @@ export default function Navbar() {
 									))}
 								</ul>
 							</div>
-							<div className="nav_left mx-auto absolute lg:relative z-10">
-								<form>	
+							<div className="nav_left flex mx-auto my-auto lg:relative items-center gap-2">
+								<form className="invisible">	
 									<div className="flex items-center py-6 px-4 gap-2">
 										<input className="" type="text" placeholder="...search" name="search" />
 										<button><i><Search /></i></button>
 									</div>							
 								</form>
+								<Search />
+								<User />
+								<ShoppingCart />
 							</div>
 						</div>
 						<div className="absolute lg:hidden z-20 right-0">

@@ -55,7 +55,7 @@ export default function Navbar() {
 				<div className="w-full dark:text-gray-100 text-gray-100">
 					<div className="relative w-full flex justify-between items-center">
 							<div className="flex shrink-0 items-center py-4 ">
-								<Link href="#"><Image src={PBCLogo} alt={'PBCLogo'} width={50} height={50} /></Link>
+								<Link href="/"><Image src={PBCLogo} alt={'PBCLogo'} width={50} height={50} /></Link>
 							</div>
 						<div className="nav_main flex flex-1 items-center justify-center md:justify-between m-0">
 							<div className={`nav_right ${
@@ -64,7 +64,7 @@ export default function Navbar() {
 							>
 								<ul className="flex flex-col lg:flex-row absolute lg:relative top-20 lg:top-0 left-0- z-20 w-full sm:ml-6 ">
 										<li className="py-6 px-4 hover:bg-gray-700 flex gap-2">
-											<i><House /></i>Home Page
+											<Link href="/" className="flex gap-2"><i><House /></i>Home Page</Link>
 										</li>
 									{NavLinks.map(({ id, name, link }) => (
 										<li key={id} className="py-6 px-4 hover:bg-gray-700 border-l border-r border-gray-800">

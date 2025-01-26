@@ -62,8 +62,8 @@ export default function Navbar() {
 								openNavMenu ? "flex" : "hidden"
 							  } relative lg:flex  flex-1 items-center justify-center sm:items-stretch sm:justify-start z-20`}
 							>
-								<ul className="flex flex-col lg:flex-row absolute lg:relative top-20 lg:top-0 left-0- z-20 w-full sm:ml-6 ">
-										<li className="py-6 px-4 hover:bg-gray-700 flex gap-2">
+								<ul className="flex flex-col lg:flex-row absolute lg:relative top-20 lg:top-0 left-0 z-20 w-full sm:ml-6 bg-gray-950">
+										<li className="py-6 px-4 hover:bg-gray-700 flex gap-2"> 
 											<Link href="/" className="flex gap-2"><i><House /></i>Home Page</Link>
 										</li>
 									{NavLinks.map(({ id, name, link }) => (

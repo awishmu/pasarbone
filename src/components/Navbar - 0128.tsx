@@ -40,8 +40,13 @@ export default function Navbar() {
  		} else {
 		  setOpenNavMenu(true);
  		}
-	};
+	  };
 
+	const handleClick = () => {
+		if (!openNavMenu) return;
+
+		setOpenNavMenu(false);
+	};
 	
   return (
 	<>
@@ -54,10 +59,10 @@ export default function Navbar() {
 							</div>
 						<div className="nav_main flex flex-1 items-center justify-center md:justify-between m-0">
 							<div className={`nav_right ${
-								openNavMenu ? "flex w-full" : "hidden"
-							  } relative lg:flex flex-1 items-center justify-center sm:items-stretch sm:justify-start z-20`}
+								openNavMenu ? "flex" : "hidden"
+							  } relative lg:flex  flex-1 items-center justify-center sm:items-stretch sm:justify-start z-20`}
 							>
-								<ul className="flex flex-col lg:flex-row absolute lg:relative top-20 lg:top-0 left-0 w-full sm:ml-6 bg-gray-950">
+								<ul className="flex flex-col lg:flex-row absolute lg:relative top-20 lg:top-0 left-0 z-20 w-full sm:ml-6 bg-gray-950">
 										<li className="py-6 px-4 hover:bg-gray-700 flex gap-2"> 
 											<Link href="/" className="flex gap-2"><i><House /></i>Home Page</Link>
 										</li>
@@ -79,12 +84,11 @@ export default function Navbar() {
 								<User />
 								<ShoppingCart />
 							</div>
-							<div className="ml-8 lg:hidden right-0">
-								{/*  Mobile menu button */}
-								<button onClick={toggleNavMenu}><i><Menu /></i></button>
-							</div>
 						</div>
-						
+						<div className="absolute lg:hidden z-20 right-0">
+							{/*  Mobile menu button */}
+							<button onClick={toggleNavMenu}><i><Menu /></i></button>
+						</div>
 						
 					</div>
 				</div>

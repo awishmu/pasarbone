@@ -4,6 +4,7 @@ import Link from "next/link";
 import { House } from 'lucide-react';
 import { Search } from 'lucide-react';
 import { Menu } from 'lucide-react';
+import { X } from 'lucide-react';
 import { User } from 'lucide-react';
 import { ShoppingCart } from 'lucide-react';
 
@@ -53,9 +54,7 @@ export default function Navbar() {
 								<Link href="/"><Image src={PBCLogo} alt={'PBCLogo'} width={50} height={50} /></Link>
 							</div>
 						<div className="nav_main flex flex-1 items-center justify-center md:justify-between m-0">
-							<div className={`nav_right ${
-								openNavMenu ? "flex w-full" : "hidden"
-							  } relative lg:flex flex-1 items-center justify-center sm:items-stretch sm:justify-start z-20`}
+							<div className= "hidden relative lg:flex flex-1 items-center justify-center sm:items-stretch sm:justify-start z-20"
 							>
 								<ul className="flex flex-col lg:flex-row absolute lg:relative top-20 lg:top-0 left-0 w-full sm:ml-6 bg-gray-950">
 										<li className="py-6 px-4 hover:bg-gray-700 flex gap-2"> 
@@ -81,18 +80,36 @@ export default function Navbar() {
 							</div>
 							<div className="ml-8 lg:hidden right-0">
 								{/*  Mobile menu button */}
-								<button onClick={toggleNavMenu}><i><Menu /></i></button>
+								<button onClick={toggleNavMenu}  className="hover:bg-violet-600 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-violet-700">
+														
+									{openNavMenu ? <i><X /></i> : <i><Menu /></i>}
+									<button class="bg-violet-500 hover:bg-violet-600 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-violet-700 ...">
+  Save changes
+</button>
+								</button>
 							</div>
-						</div>
-						
-						
+						</div>						
 					</div>
 				</div>
-				
 			</div>
 		
 			{/* <!-- Mobile menu, show/hide based on menu state. --> */}
-			
+			<div className= {`${
+								openNavMenu ? "flex" : "hidden"
+							  }  relative lg:hidden flex-1 items-center justify-center sm:items-stretch sm:justify-start z-20
+							  `}
+							>
+								<ul className="flex flex-col lg:flex-row absolute lg:relative top-0 lg:top-0 left-0 w-full sm:ml-6 bg-gray-950">
+										<li className="py-6 px-4 hover:bg-gray-700 flex gap-2"> 
+											<Link href="/" className="flex gap-2"><i><House /></i>Home Page</Link>
+										</li>
+									{NavLinks.map(({ id, name, link }) => (
+										<li key={id} className="py-6 px-4 hover:bg-gray-700 border-l border-r border-gray-800">
+											<Link href={link}>{name}</Link>
+										</li>
+									))}
+								</ul>
+			</div>
 		</nav>
 		
 	</>

@@ -80,12 +80,10 @@ export default function Navbar() {
 							</div>
 							<div className="ml-8 lg:hidden right-0">
 								{/*  Mobile menu button */}
-								<button onClick={toggleNavMenu}  className="hover:bg-violet-600 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-violet-700">
+								<button onClick={toggleNavMenu}  className="hover:outline-2 ">
 														
-									{openNavMenu ? <i><X /></i> : <i><Menu /></i>}
-									<button class="bg-violet-500 hover:bg-violet-600 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-violet-700 ...">
-  Save changes
-</button>
+									{openNavMenu ? <i><X className="focus-within:shadow-lg"/></i> : <i><Menu className="focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-violet-700" /></i>}
+					
 								</button>
 							</div>
 						</div>						

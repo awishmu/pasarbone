@@ -73,7 +73,7 @@ export default function ProductsPage() {
 							  <h3 className="text-lg font-medium text-white">Email</h3>
 
 							  <div className="flow-root">
-								<h4 className="text-xs font-medium text-gray-300">0812 6805 2229</h4>
+								<h4 className="text-xs font-medium text-gray-300">awishdotid@gmail.com</h4>
 							  </div>
 							</div>
 						  </div>
